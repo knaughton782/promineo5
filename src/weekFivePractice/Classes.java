@@ -15,10 +15,10 @@ public class Classes {
 		
 		
 		Student student1 = new Student();
-		student1.firstName = "Tom";
-		student1.lastName = "Smith";
-		student1.gradeLevel = 12;
-		student1.phoneNumber = "480-123-1234";
+		//student1.firstName = "Tom";
+		//student1.lastName = "Smith";
+		//student1.gradeLevel = 12;
+		//student1.phoneNumber = "480-123-1234";
 		
 		student1.introduce();
 		
