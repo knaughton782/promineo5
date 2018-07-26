@@ -18,17 +18,29 @@ public class Game {
 		this.player2 = player2;
 		scanner = new Scanner(System.in);
 		this.turn = player1;
+		start();
+	}
+	
+	public void start() {
+		while(true) {
+			move();
+			System.out.println(board.toString());
+		}
 	}
 	
 	public void move() {
 		System.out.println("Player " + turn.getToken() + "'s turn.");
-		System.out.print("Enter x: ");
+		System.out.print("Enter X: ");
 		int x = scanner.nextInt();
-		System.out.print("Enter y;");
-		int y = scanner.nextInt();
-		board.placeCharacter(turn.getToken(), x, y);
-		switchTurn();
+		System.out.print("Enter O;");
+		int o = scanner.nextInt();
 		
+		if (board.placeCharacter(turn.getToken(), x, o)) {
+			
+			switchTurn();
+		} else {
+			System.out.println("Please choose a valid move.");
+		}
 	}
 	
 	private void switchTurn() {

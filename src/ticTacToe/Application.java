@@ -11,8 +11,16 @@ public class Application {
 		 * 		
 		 */
 		
+//		Board board = new Board();
+//		System.out.println(board.toString());
+		
+		
 		Board board = new Board();
-		System.out.println(board.toString());
+		Player x = new Player('X');
+		Player o = new Player('O');
+		Game game = new Game(board, x, o);
+		
+		game.start();
 	}
 
 }
